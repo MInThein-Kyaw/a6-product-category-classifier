@@ -1,0 +1,87 @@
+Preflight: wrapper at 0.45 matches original on all 10 cases; same fitted model reused.
+Dataset SHA-256: a2620f68b0fa35c699ec0c6e24068349ff9db4cd5addceb17a81819e4096d7e5
+Expectations were frozen before this run; no labels are changed by evaluation.
+
+ACTUAL RETRIEVAL DEMONSTRATION
+{
+  "input": {
+    "product_name": "Portable Bluetooth headphones",
+    "description": "Wireless audio headphones with microphone and rechargeable battery"
+  },
+  "retrieved_context": [
+    {
+      "score": 5,
+      "id": "K01",
+      "category": "Electronics",
+      "description": "Audio devices use electronic components to play or capture sound.",
+      "keywords": [
+        "headphones",
+        "speaker",
+        "audio",
+        "bluetooth",
+        "microphone",
+        "wireless",
+        "battery"
+      ],
+      "product_examples": [
+        "Bluetooth headphones",
+        "Portable audio speaker"
+      ]
+    }
+  ],
+  "actual_decision": {
+    "category": "Electronics",
+    "confidence": 0.7183149479308034,
+    "status": "classified",
+    "reason": "Highest estimated category probability meets the 0.45 threshold."
+  },
+  "context_usage": "Retrieved application/reviewer metadata only; not passed into A6 model features."
+}
+
+BASELINE - threshold 0.45
+ID | Expected category / status | Actual category / status | Confidence | Result | Median ms
+T01 | Electronics / classified | Electronics / classified | 0.7183149479308034 | PASS | 0.546750
+T02 | Clothing / classified | Clothing / classified | 0.7976990227195476 | PASS | 0.562300
+T03 | Home & Kitchen / classified | Home & Kitchen / classified | 0.7012092347176383 | PASS | 0.564200
+T04 | Books / classified | Books / classified | 0.6901152674835483 | PASS | 0.553900
+T05 | Manual Review / manual_review | Manual Review / manual_review | 0.2611879742278097 | PASS | 0.548750
+T06 | Electronics / classified | Electronics / classified | 0.7207336452639604 | PASS | 0.559150
+T07 | None / invalid_input | None / invalid_input | None | PASS | 0.000700
+T08 | Manual Review / manual_review | Manual Review / manual_review | None | PASS | 0.016900
+T09 | Electronics / classified | Manual Review / manual_review | 0.37620155496730606 | FAIL | 0.569600
+T10 | Clothing / classified | Clothing / classified | 0.577241817684517 | PASS | 0.571950
+Accuracy: 9/10 = 90.0%
+P95 latency: 0.730000 ms (300 calls)
+API cost per task: N/A (local model; no paid API calls)
+
+
+IMPROVED - threshold 0.40
+ID | Expected category / status | Actual category / status | Confidence | Result | Median ms
+T01 | Electronics / classified | Electronics / classified | 0.7183149479308034 | PASS | 0.549000
+T02 | Clothing / classified | Clothing / classified | 0.7976990227195476 | PASS | 0.564350
+T03 | Home & Kitchen / classified | Home & Kitchen / classified | 0.7012092347176383 | PASS | 0.562550
+T04 | Books / classified | Books / classified | 0.6901152674835483 | PASS | 0.558150
+T05 | Manual Review / manual_review | Manual Review / manual_review | 0.2611879742278097 | PASS | 0.546750
+T06 | Electronics / classified | Electronics / classified | 0.7207336452639604 | PASS | 0.564450
+T07 | None / invalid_input | None / invalid_input | None | PASS | 0.001200
+T08 | Manual Review / manual_review | Manual Review / manual_review | None | PASS | 0.018100
+T09 | Electronics / classified | Manual Review / manual_review | 0.37620155496730606 | FAIL | 0.569100
+T10 | Clothing / classified | Clothing / classified | 0.577241817684517 | PASS | 0.570700
+Accuracy: 9/10 = 90.0%
+P95 latency: 0.658800 ms (300 calls)
+API cost per task: N/A (local model; no paid API calls)
+
+CASE-BY-CASE COMPARISON
+T01: PASS -> PASS (unchanged)
+T02: PASS -> PASS (unchanged)
+T03: PASS -> PASS (unchanged)
+T04: PASS -> PASS (unchanged)
+T05: PASS -> PASS (unchanged)
+T06: PASS -> PASS (unchanged)
+T07: PASS -> PASS (unchanged)
+T08: PASS -> PASS (unchanged)
+T09: FAIL -> FAIL (unchanged)
+T10: PASS -> PASS (unchanged)
+
+INTEGRITY PASS: all original root A6 files and frozen evaluation cases unchanged.
+API cost: N/A; all inference is local. Latencies are measured, not estimated.

@@ -1,0 +1,39 @@
+{
+  "frozen_at_utc": "2026-10-26T19:43:53.949902+00:00",
+  "dataset_sha256": "a2620f68b0fa35c699ec0c6e24068349ff9db4cd5addceb17a81819e4096d7e5",
+  "case_ids": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07",
+    "T08",
+    "T09",
+    "T10"
+  ],
+  "case_type_counts": {
+    "normal": 3,
+    "edge": 3,
+    "fallback": 2,
+    "difficult": 2
+  },
+  "a6_files": {
+    ".gitignore": "acf7e1e4b85896be1380cd11801386aeb20bb5eef56585c6313c0a6003146194",
+    "A6_Report.md": "83481305246ae5ebaae3dcc763b25b4e561edd6faa49d119e2d193699ba5f73c",
+    "architecture.mmd": "1c2c536fff5dac5118781d116367b1e01f84ad3ca1f3982cbe50413f77159eb9",
+    "classifier.py": "271bae5a2a9b488029ec219a4523e5c22bce7c871e587ea2493650dc82854c6c",
+    "demo_predictions.py": "e563b7aeefbb340d9b071a05a702c60408870cf7cdaceee22d0f608cfb22f089",
+    "prediction_results.txt": "0f6f9964e8596f6c3efd7608088e433c586d9926c8a30132da460cc891de9366",
+    "README.md": "fd4189117f597067c6659f36ebe5248a693f28cf78324927d57a80734bba8e0f",
+    "report_outline.md": "4fec72880d490f674e614fbfbcb439a3c37abf4302497fbd6e053480d41d9f55",
+    "requirements.txt": "a11015c44fb54c78652d4b3904fbbb159c0119a836fae808431bc763743c33e9",
+    "task3_architecture.png": "4a570256aa59bfebd09e792f81ac7d124ec46a234f14f106164a92dfe3825dfb",
+    "task3_demo.py": "c712a8112fd9e70cad3cb18367647433ee586178e596ab6020aa24ff4e6cc881",
+    "task3_failure_evidence.txt": "e6276a92d04336f42eb4b1dff1c7c2880f2f2c6bfacb872e54e1cbe3c426a1e1",
+    "task3_integration.md": "2c9821da905f634df6624cb6e4f8032bfb131166284ee7480dcfb8f24a8b21d7",
+    "test_classifier.py": "9dae7375622e30b2f64bb57a73aa10190cea5d3f581eecf94901d7b0a9b54ef9",
+    "test_results.txt": "ef56c979aa24cfaa993139b0035200299c080107f7156d07969b8b3b2113ff25"
+  }
+}

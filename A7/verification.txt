@@ -1,0 +1,11 @@
+PASS: original A6 file hashes and root file list are unchanged.
+PASS: frozen dataset has exactly 3 normal, 3 edge, 2 fallback, 2 difficult cases.
+PASS: baseline counts, raw samples, accuracy numerator, dataset hash, and p95 agree.
+PASS: improved counts, raw samples, accuracy numerator, dataset hash, and p95 agree.
+PASS: SIMULATED confidence 0.39: baseline manual_review, wrapper manual_review.
+PASS: SIMULATED confidence 0.40: baseline manual_review, wrapper classified.
+PASS: SIMULATED confidence 0.42: baseline manual_review, wrapper classified.
+PASS: SIMULATED confidence 0.45: baseline classified, wrapper classified.
+PASS: SIMULATED invalid probabilities, inference exception, invalid input, and unavailable model preserve fallback.
+PASS: report has nine sections and knowledge base has at least five records.
+Verification complete. No evaluation results or expected labels were changed.

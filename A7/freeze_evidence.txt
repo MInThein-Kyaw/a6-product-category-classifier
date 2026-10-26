@@ -1,0 +1,5 @@
+EXPECTED RESULTS FROZEN BEFORE A7 EVALUATION
+Dataset SHA-256: a2620f68b0fa35c699ec0c6e24068349ff9db4cd5addceb17a81819e4096d7e5
+UTC: 2026-10-26T19:43:53.949902+00:00
+10 cases: 3 normal, 3 edge, 2 fallback, 2 difficult.
+No model was fitted or evaluated by this freeze command.

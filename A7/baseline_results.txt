@@ -1,0 +1,15 @@
+BASELINE - threshold 0.45
+ID | Expected category / status | Actual category / status | Confidence | Result | Median ms
+T01 | Electronics / classified | Electronics / classified | 0.7183149479308034 | PASS | 0.546750
+T02 | Clothing / classified | Clothing / classified | 0.7976990227195476 | PASS | 0.562300
+T03 | Home & Kitchen / classified | Home & Kitchen / classified | 0.7012092347176383 | PASS | 0.564200
+T04 | Books / classified | Books / classified | 0.6901152674835483 | PASS | 0.553900
+T05 | Manual Review / manual_review | Manual Review / manual_review | 0.2611879742278097 | PASS | 0.548750
+T06 | Electronics / classified | Electronics / classified | 0.7207336452639604 | PASS | 0.559150
+T07 | None / invalid_input | None / invalid_input | None | PASS | 0.000700
+T08 | Manual Review / manual_review | Manual Review / manual_review | None | PASS | 0.016900
+T09 | Electronics / classified | Manual Review / manual_review | 0.37620155496730606 | FAIL | 0.569600
+T10 | Clothing / classified | Clothing / classified | 0.577241817684517 | PASS | 0.571950
+Accuracy: 9/10 = 90.0%
+P95 latency: 0.730000 ms (300 calls)
+API cost per task: N/A (local model; no paid API calls)

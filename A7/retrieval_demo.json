@@ -1,0 +1,34 @@
+{
+  "input": {
+    "product_name": "Portable Bluetooth headphones",
+    "description": "Wireless audio headphones with microphone and rechargeable battery"
+  },
+  "retrieved_context": [
+    {
+      "score": 5,
+      "id": "K01",
+      "category": "Electronics",
+      "description": "Audio devices use electronic components to play or capture sound.",
+      "keywords": [
+        "headphones",
+        "speaker",
+        "audio",
+        "bluetooth",
+        "microphone",
+        "wireless",
+        "battery"
+      ],
+      "product_examples": [
+        "Bluetooth headphones",
+        "Portable audio speaker"
+      ]
+    }
+  ],
+  "actual_decision": {
+    "category": "Electronics",
+    "confidence": 0.7183149479308034,
+    "status": "classified",
+    "reason": "Highest estimated category probability meets the 0.45 threshold."
+  },
+  "context_usage": "Retrieved application/reviewer metadata only; not passed into A6 model features."
+}
