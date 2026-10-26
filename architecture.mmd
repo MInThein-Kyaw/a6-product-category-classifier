@@ -1,0 +1,15 @@
+flowchart TD
+    User[User submits product name and description] --> App[Application / classifier function]
+    App --> Input{Input valid?}
+    Input -->|No| Reject[Return invalid_input JSON]
+    Input -->|Yes| Available{Trained model available?}
+    Available -->|No| Review[Manual Review queue]
+    Available -->|Yes| Model[TF-IDF + Logistic Regression]
+    Model -->|Prediction error| Review
+    Model --> Output{Category and probabilities valid?}
+    Output -->|No| Review
+    Output -->|Yes| Confidence{Confidence at least 0.45?}
+    Confidence -->|No| Review
+    Confidence -->|Yes| Route[Route product to predicted category]
+    Route --> Success[Return classified JSON]
+    Review --> Fallback[Return manual_review JSON]

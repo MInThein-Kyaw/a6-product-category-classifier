@@ -1,0 +1,76 @@
+PRODUCT CATEGORY CLASSIFIER - ACTUAL PREDICTIONS
+Existing TF-IDF + Logistic Regression model; no simulated predictions.
+PASS requires both the expected category and expected status.
+Confidence is an estimated model probability, not guaranteed accuracy.
+
+Example 1
+--------------------------------------------------------------------------------
+Product name      : Portable Bluetooth headphones
+Description       : Wireless audio headphones with microphone and rechargeable battery
+Expected category : Electronics
+Actual category   : Electronics
+Confidence score  : 0.718315 (71.83%)
+Status            : classified
+Reason            : Highest estimated category probability meets the 0.45 threshold.
+Result            : PASS
+
+Example 2
+--------------------------------------------------------------------------------
+Product name      : Casual cotton shirt
+Description       : Soft cotton shirt with long sleeves and collar for everyday wear
+Expected category : Clothing
+Actual category   : Clothing
+Confidence score  : 0.797699 (79.77%)
+Status            : classified
+Reason            : Highest estimated category probability meets the 0.45 threshold.
+Result            : PASS
+
+Example 3
+--------------------------------------------------------------------------------
+Product name      : Large cooking saucepan
+Description       : Kitchen cooking pot with lid for preparing food
+Expected category : Home & Kitchen
+Actual category   : Home & Kitchen
+Confidence score  : 0.701209 (70.12%)
+Status            : classified
+Reason            : Highest estimated category probability meets the 0.45 threshold.
+Result            : PASS
+
+Example 4
+--------------------------------------------------------------------------------
+Product name      : Space adventure novel
+Description       : Paperback fiction book with imaginative stories and adventure
+                    chapters
+Expected category : Books
+Actual category   : Books
+Confidence score  : 0.748030 (74.80%)
+Status            : classified
+Reason            : Highest estimated category probability meets the 0.45 threshold.
+Result            : PASS
+
+Example 5
+--------------------------------------------------------------------------------
+Product name      : Compact wireless speaker
+Description       : Portable Bluetooth audio speaker with rechargeable battery for
+                    wireless music
+Expected category : Electronics
+Actual category   : Electronics
+Confidence score  : 0.757894 (75.79%)
+Status            : classified
+Reason            : Highest estimated category probability meets the 0.45 threshold.
+Result            : PASS
+
+Example 6 - Real low-confidence fallback
+--------------------------------------------------------------------------------
+Product name      : Smart recipe tablet
+Description       : Touchscreen tablet with digital cooking recipes and illustrated
+                    cookbook chapters
+Expected category : Manual Review
+Actual category   : Manual Review
+Confidence score  : 0.376202 (37.62%)
+Status            : manual_review
+Reason            : Confidence below 0.45; human review required.
+Result            : PASS
+
+================================================================================
+Summary: 6/6 PASS; 0 FAIL

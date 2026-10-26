@@ -1,0 +1,49 @@
+TASK 3 - ACTUAL LOCAL EXECUTION EVIDENCE
+HTTP requests are not executed; the proposed API is documentation only.
+
+1. REAL MODEL: normal prediction
+Input: {"product_name": "Portable Bluetooth headphones", "description": "Wireless audio headphones with microphone and rechargeable battery"}
+{
+  "category": "Electronics",
+  "confidence": 0.7183149479308034,
+  "status": "classified",
+  "reason": "Highest estimated category probability meets the 0.45 threshold."
+}
+Expected: Electronics / classified
+Result: PASS
+
+2. REAL MODEL: ambiguous input / low-confidence fallback
+Input: {"product_name": "Smart recipe tablet", "description": "Touchscreen tablet with digital cooking recipes and illustrated cookbook chapters"}
+{
+  "category": "Manual Review",
+  "confidence": 0.37620155496730606,
+  "status": "manual_review",
+  "reason": "Confidence below 0.45; human review required."
+}
+Expected: Manual Review / manual_review with confidence below 0.45
+Result: PASS
+
+3. SIMULATED MODEL FAILURE: temporary in-memory exception injection
+Input: {"product_name": "Portable Bluetooth headphones", "description": "Wireless audio headphones with microphone and rechargeable battery"}
+Injection: predict_proba raises RuntimeError('Simulated model failure').
+{
+  "category": "Manual Review",
+  "confidence": null,
+  "status": "manual_review",
+  "reason": "Model prediction failed."
+}
+Expected: {"category": "Manual Review", "confidence": null, "status": "manual_review", "reason": "Model prediction failed."}
+Injected model method called: True
+Result: PASS
+
+4. REAL MODEL: prediction after removing the temporary mock
+{
+  "category": "Electronics",
+  "confidence": 0.7183149479308034,
+  "status": "classified",
+  "reason": "Highest estimated category probability meets the 0.45 threshold."
+}
+Expected: original normal prediction restored
+Result: PASS
+
+Summary: 4/4 PASS
